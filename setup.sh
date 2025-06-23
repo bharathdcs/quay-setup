@@ -1,4 +1,8 @@
+echo "Installing the dependencies"
+echo "---------------------------------------"
+dnf -y install openssl podman
 echo "Installing the standalone quay registry"
+echo "---------------------------------------"
 mkdir $HOME/quay-installer
 cd $HOME/quay-installer
 wget https://github.com/quay/mirror-registry/releases/download/v2.0.6/mirror-registry-online.tar.gz
