@@ -1,6 +1,11 @@
 echo "Installing the dependencies"
 echo "---------------------------------------"
 dnf -y install openssl podman
+
+echo "Logging into Redhat Registry"
+echo "---------------------------------------"
+podman login registry.redhat.io
+
 echo "Installing the standalone quay registry"
 echo "---------------------------------------"
 mkdir $HOME/quay-installer
